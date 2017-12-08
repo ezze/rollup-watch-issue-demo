@@ -13,7 +13,7 @@ In order to disable this behavior unset `safe write` option:
 
 > Settings | Appearance & Behavior | System Settings | Use "safe write" (save changes to temporary file first)
 
-When files are changed directly (for example, by automatic scripts mentioned below) then everything works as expceted.
+When files are changed directly (for example, by automatic scripts mentioned below) then everything works as expected.
 
 ## Reproducing
 
