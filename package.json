@@ -4,7 +4,10 @@
   "description": "Rollup watch issue demonstration https://github.com/rollup/rollup/issues/1669",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "transpile": "babel src -d lib",
+    "build": "rollup --config rollup.config.es.js",
+    "watch": "rollup --config rollup.config.es.js --watch",
+    "watch:chokidar": "node --require babel-register rollup.watch.es.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,14 @@
   "bugs": {
     "url": "https://github.com/ezze/rollup-watch-issue-demo/issues"
   },
-  "homepage": "https://github.com/ezze/rollup-watch-issue-demo#readme"
+  "homepage": "https://github.com/ezze/rollup-watch-issue-demo#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "chokidar": "^1.7.0",
+    "rollup": "^0.52.1",
+    "rollup-plugin-babel": "^3.0.2"
+  }
 }
