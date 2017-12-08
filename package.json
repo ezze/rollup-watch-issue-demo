@@ -6,6 +6,7 @@
   "scripts": {
     "transpile": "babel src -d lib",
     "build": "rollup --config rollup.config.es.js",
+    "makeChanges": "node --require babel-register makeChanges.js",
     "watch": "rollup --config rollup.config.es.js --watch",
     "watch:chokidar": "node --require babel-register rollup.watch.es.js"
   },
@@ -32,5 +33,6 @@
     "chokidar": "^1.7.0",
     "rollup": "^0.52.1",
     "rollup-plugin-babel": "^3.0.2"
-  }
+  },
+  "dependencies": {}
 }
